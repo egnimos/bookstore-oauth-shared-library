@@ -84,7 +84,7 @@ func cleanRequest(request *http.Request) {
 	request.Header.Del(headerXCallerId)
 }
 
-//AuthenticateRequest : this method clean the request header
+//AuthenticateRequest : this method clean the request header and authenticate the RESTAPI based on the accesstoken
 func AuthenticateRequest(request *http.Request) *rest_errors.RestErr {
 	if request == nil {
 		return nil
